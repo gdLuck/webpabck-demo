@@ -8,7 +8,7 @@ class Greeter extends Component{
       <div className={styles.root}>
         {config.greetText}
         <div>
-          123456
+          {__dirname}
         </div>
       </div>
     );

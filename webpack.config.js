@@ -5,7 +5,9 @@ const CleanWebpackPlugin = require("clean-webpack-plugin"); // 去除build文件
 
 module.exports = {
   devtool: 'eval-source-map',
-  entry:  __dirname + "/app/main.js",//已多次提及的唯一入口文件
+  entry:  {
+    app: ['babel-polyfill','./app/main.js']
+  },//唯一入口文件
   output: {
     path: __dirname + "/build",//打包后的文件存放的地方
     filename: "bundle.js"
